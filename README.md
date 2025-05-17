@@ -21,7 +21,7 @@ Formato esperado do CSV:
 Certifique-se de manter o cabeçalho original do CSV e que ele esteja codificado em UTF-8.
 
 ## ⚙️ Requisitos
-- Python 3.10 ou superior
+- Python 3.12 ou superior
 - Bibliotecas necessárias:
   - `scikit-learn`
   - `nltk`
