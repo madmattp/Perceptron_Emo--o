@@ -96,6 +96,11 @@ def save_model(vectorizer: TfidfVectorizer, perceptron: Perceptron) -> None:
     joblib.dump(vectorizer, 'vectorizer.joblib')
     joblib.dump(perceptron, 'perceptron_model.joblib')
 
+# Carrega o modelo salvo do disco
+def load_model(vect_path: str = 'vectorizer.joblib', model_path: str = 'perceptron_model.joblib') -> tuple[TfidfVectorizer, Perceptron]:
+    vectorizer = joblib.load(vect_path)
+    perceptron = joblib.load(model_path)
+    return vectorizer, perceptron
 
 if __name__ == "__main__":
     perceptron, vectorizer = train(dataset_path="imdb-reviews-pt-br.csv")
